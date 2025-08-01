@@ -529,6 +529,10 @@ static BOOL is_hidraw_enabled(WORD vid, WORD pid, const USAGE_AND_PAGE *usages, 
         if (pid == 0xb687) prefer_hidraw = TRUE; /* ThrustMaster TWCS Throttle */
         if (pid == 0xb10a) prefer_hidraw = TRUE; /* ThrustMaster T.16000M Joystick */
         break;
+    case 0x10f5:
+        if (pid == 0x7012) prefer_hidraw = TRUE; /* Turtle Beach VelocityOne Rudder Pedals */
+        if (pid == 0x7001) prefer_hidraw = TRUE; /* Turtle Beach VelocityOne Flight Yoke */
+        break;
     case 0x16d0:
         if (pid == 0x0d61) prefer_hidraw = TRUE; /* Simucube 2 Sport */
         if (pid == 0x0d60) prefer_hidraw = TRUE; /* Simucube 2 Pro */
